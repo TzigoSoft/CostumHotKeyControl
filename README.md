@@ -2,12 +2,12 @@
 
 A Textbox based control to set, display and save custom hotkeys written in C#.
 
-Available as DLL and seperate Class
+Available as dll and seperate class
 
 It is easy to integrate and use in other C # projects.
 
 
-If you have Questions, be free to ask me.
+If you have questions, be free to ask me.
 If you find Bugs, please report them in the Comments or DM me.
 
 
@@ -18,14 +18,14 @@ You can use it like a text box and enter the Hotkey you wish. He will be display
 To use the CustomHotkeyControl.dll, simply include it as a reference in your project.
 If its not shown in the MS Visual Studio Toolbox, simply drag from the  DLL from Windows Explorer straight to the Toolbox and if needed compile (F5).
 
-To integrate as a Class in your Project in MS Visual Studio paste the demo project in your Project folder.
+To integrate as a Class in your Project in MS Visual Studio paste the CostumHotKeyControlClass project in your Project folder.
 
 You can drag and drop the CostumHotKeyControl class in your Project.
 
 Then its usable like the DLL.
 If its not shown in the MS Visual Studio Toolbox, simply drag from the  DLL from Windows Explorer straight to the Toolbox and if needed compile (F5). (respective DLL)
 
-For DLL: First reference CostumHotkeyControl in the Class you would like to use it. 
+For DLL: First reference TzigoSoft in the Class you would like to use it. 
 
 The following must be integrated into the classes constructor:
 
@@ -39,7 +39,7 @@ The following must be integrated into the classes constructor:
         }
 
         [DllImport("user32.dll")]
-        public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
+        private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
         [DllImport("user32.dll")]
         private static extern bool UnregisterHotKey(IntPtr hWnd, int id);
 
