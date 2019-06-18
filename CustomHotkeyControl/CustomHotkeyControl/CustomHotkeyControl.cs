@@ -70,6 +70,9 @@ namespace TzigoSoft
             for (Keys i = Keys.Space; i <= Keys.Home; i++)
                 NoShiftAllowed.Add((int)i);
 
+            //Shift + function keys
+            for (Keys i = Keys.F1; i <= Keys.F12; i++) NoShiftAllowed.Add((int)i);
+
             //Various Keys, that cant be used
             NoShiftAllowed.Add((int)Keys.Insert);
             NoShiftAllowed.Add((int)Keys.Help);
